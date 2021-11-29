@@ -14,7 +14,7 @@ currentDayEl.innerHTML=moment().format("dddd, MMMM Do");
 var createTimeblock = function () {
 }
 
-//  color-coded time-based loop
+
 // determine if time is in the past present or future
 function isPastPresentOrFuture(time) {
   const now = new Date()
@@ -24,7 +24,7 @@ function isPastPresentOrFuture(time) {
   return 'present'
 }
 
-function createSchedule() {
+//  color-coded time-based loopfunction createSchedule() {
   var hours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
   for (let i = 0; i < hours.length; i++) {
     containerEl.innerHTML += `
@@ -53,6 +53,6 @@ function createSchedule() {
       localStorage.setItem('task-' + hours[i], text)
     })
   }
-}
+
 
 createSchedule() 
